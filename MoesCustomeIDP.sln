@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32602.291
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoesCustomeIDP", "MoesCustomeIDP.csproj", "{112CDF7E-E878-4DC7-B44E-C85AE252B9B7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountTransactiom.ClientTwo", "..\AccountTransactiom.ClientTwo\AccountTransactiom.ClientTwo.csproj", "{21EC6CA8-E4D5-4085-A62D-80BFF063C768}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{112CDF7E-E878-4DC7-B44E-C85AE252B9B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{112CDF7E-E878-4DC7-B44E-C85AE252B9B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{112CDF7E-E878-4DC7-B44E-C85AE252B9B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{112CDF7E-E878-4DC7-B44E-C85AE252B9B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21EC6CA8-E4D5-4085-A62D-80BFF063C768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EC6CA8-E4D5-4085-A62D-80BFF063C768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21EC6CA8-E4D5-4085-A62D-80BFF063C768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21EC6CA8-E4D5-4085-A62D-80BFF063C768}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {558DF9F8-94ED-4F72-9552-E1FB26874C43}
+	EndGlobalSection
+EndGlobal
