@@ -21,8 +21,14 @@ namespace MoesCustomIDP
 
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
-            { };
+            {
+            
+            new ApiScope("usertransactionapi","User Transaction Api")
+            };
+        public  static void  getstring()
+        {
 
+        }
         public static IEnumerable<Client> Clients =>
             new Client[] 
             { 
@@ -45,7 +51,8 @@ namespace MoesCustomIDP
                      IdentityServer4.IdentityServerConstants.StandardScopes.OpenId,
                            IdentityServer4.IdentityServerConstants.StandardScopes.Profile,
                             IdentityServer4.IdentityServerConstants.StandardScopes.Address,
-                                     "roles"
+                                     "roles",
+                                     "usertransactionapi"
                   },
 
                   ClientSecrets =

@@ -22,7 +22,7 @@ namespace MoesCustomIDP
                 .MinimumLevel.Override("System", LogEventLevel.Warning)
                 .MinimumLevel.Override("Microsoft.AspNetCore.Authentication", LogEventLevel.Information)
                 .Enrich.FromLogContext()
-                // uncomment to write to Azure diagnostics stream
+                // uncomment to write to Azure diagnostics strea
                 //.WriteTo.File(
                 //    @"D:\home\LogFiles\Application\identityserver.txt",
                 //    fileSizeLimitBytes: 1_000_000,
