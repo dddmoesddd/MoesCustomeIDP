@@ -3,6 +3,7 @@
 
 
 
+using IdentityModel;
 using IdentityServer4.Models;
 using System.Collections.Generic;
 
@@ -12,27 +13,42 @@ namespace MoesCustomIDP
     {
         public static IEnumerable<IdentityResource> IdentityResources =>
             new IdentityResource[]
-            { 
+            {
                 new IdentityResources.OpenId(),
                  new IdentityResources.Profile(),
                             new IdentityResources.Address(),
-                            new IdentityResource("roles","Your Role",new List<string>(){"role" })
+                            new IdentityResource("roles","Your Role",new List<string>(){"role"})
             };
 
-        public static IEnumerable<ApiScope> ApiScopes =>
-            new ApiScope[]
+        public static IEnumerable<ApiResource> ApiResources =>
+            new ApiResource[]
             {
-            
-            new ApiScope("usertransactionapi","User Transaction Api")
-            };
-        public  static void  getstring()
-        {
 
-        }
+            //new ApiResource(){Name="usertransactionapi",ApiSecrets={ new Secret("MyApiSecret".Sha256()) } },
+        new ApiResource("usertransactionapi")
+{
+    UserClaims =
+    {
+        JwtClaimTypes.Audience
+    },
+    Scopes = new List<string>
+    {
+        "usertransactionapi"
+    },
+}
+            };
+        public static IEnumerable<ApiScope> ApiScopes =>
+    new ApiScope[]
+    {
+                new ApiScope(
+                    "usertransactionapi",
+                    "User Transaction Api")
+    };
         public static IEnumerable<Client> Clients =>
-            new Client[] 
-            { 
+            new Client[]
+            {
               new Client {
+
                   ClientName="AccountTransactiom" ,
                   RequirePkce=true,
                   ClientId="accounttransactionclient",
