@@ -29,14 +29,20 @@ namespace MoesCustomIDP
 {
     UserClaims =
     {
-        JwtClaimTypes.Audience
+        JwtClaimTypes.Audience,"role"
     },
     Scopes = new List<string>
     {
-        "usertransactionapi"
+        "usertransactionapi",
+
     },
-}
-            };
+
+},
+
+
+
+
+    };
         public static IEnumerable<ApiScope> ApiScopes =>
     new ApiScope[]
     {

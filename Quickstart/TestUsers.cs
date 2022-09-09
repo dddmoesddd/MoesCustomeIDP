@@ -54,6 +54,8 @@ namespace IdentityServerHost.Quickstart.UI
                         Password = "bob",
                         Claims =
                         {
+                 
+                                      new Claim(JwtClaimTypes.Role, "VIPUser"),
                             new Claim(JwtClaimTypes.Name, "Bob Smith"),
                             new Claim(JwtClaimTypes.GivenName, "Bob"),
                             new Claim(JwtClaimTypes.FamilyName, "Smith"),
