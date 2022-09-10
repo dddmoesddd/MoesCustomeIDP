@@ -43,6 +43,8 @@ namespace IdentityServerHost.Quickstart.UI
                      new Claim("family_name", "Underwood"),
                      new Claim("address", "Main Road 1"),
                      new Claim("role", "FreeUser"),
+                     new Claim("country", "iran"),
+                      new Claim("undersangtion", "y"),
 
 
                         }
@@ -54,15 +56,16 @@ namespace IdentityServerHost.Quickstart.UI
                         Password = "bob",
                         Claims =
                         {
-                 
-                                      new Claim(JwtClaimTypes.Role, "VIPUser"),
-                            new Claim(JwtClaimTypes.Name, "Bob Smith"),
-                            new Claim(JwtClaimTypes.GivenName, "Bob"),
-                            new Claim(JwtClaimTypes.FamilyName, "Smith"),
-                            new Claim(JwtClaimTypes.Email, "BobSmith@email.com"),
-                            new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
-                            new Claim(JwtClaimTypes.WebSite, "http://bob.com"),
-                            new Claim(JwtClaimTypes.Address, JsonSerializer.Serialize(address), IdentityServerConstants.ClaimValueTypes.Json)
+                           new Claim("country", "sapin"),
+                           new Claim("undersangtion", "n"),
+                           new Claim(JwtClaimTypes.Role, "VIPUser"),
+                           new Claim(JwtClaimTypes.Name, "Bob Smith"),
+                           new Claim(JwtClaimTypes.GivenName, "Bob"),
+                           new Claim(JwtClaimTypes.FamilyName, "Smith"),
+                           new Claim(JwtClaimTypes.Email, "BobSmith@email.com"),
+                           new Claim(JwtClaimTypes.EmailVerified, "true", ClaimValueTypes.Boolean),
+                           new Claim(JwtClaimTypes.WebSite, "http://bob.com"),
+                           new Claim(JwtClaimTypes.Address, JsonSerializer.Serialize(address), IdentityServerConstants.ClaimValueTypes.Json)
                         }
                     }
                 };

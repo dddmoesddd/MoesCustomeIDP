@@ -17,7 +17,9 @@ namespace MoesCustomIDP
                 new IdentityResources.OpenId(),
                  new IdentityResources.Profile(),
                             new IdentityResources.Address(),
-                            new IdentityResource("roles","Your Role",new List<string>(){"role"})
+                            new IdentityResource("roles","Your Role",new List<string>(){"role"}),
+                            new IdentityResource("countrypolicy","the country that you live in",new List<string>(){"country"}),
+                            new IdentityResource("undersangtionpolicy","Is This Country Under International Sangtion? ",new List<string>(){"undersangtion"})
             };
 
         public static IEnumerable<ApiResource> ApiResources =>
@@ -29,7 +31,7 @@ namespace MoesCustomIDP
 {
     UserClaims =
     {
-        JwtClaimTypes.Audience,"role"
+        JwtClaimTypes.Audience,"role","country","undersangtion"
     },
     Scopes = new List<string>
     {
@@ -74,7 +76,9 @@ namespace MoesCustomIDP
                            IdentityServer4.IdentityServerConstants.StandardScopes.Profile,
                             IdentityServer4.IdentityServerConstants.StandardScopes.Address,
                                      "roles",
-                                     "usertransactionapi"
+                                     "usertransactionapi",
+                                     "countrypolicy",
+                                     "undersangtionpolicy"
                   },
 
                   ClientSecrets =
