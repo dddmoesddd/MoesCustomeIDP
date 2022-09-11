@@ -38,6 +38,7 @@ namespace MoesCustomIDP
         "usertransactionapi",
 
     },
+   ApiSecrets = { new Secret("apisecret".Sha256())}
 
 },
 
@@ -56,7 +57,10 @@ namespace MoesCustomIDP
             new Client[]
             {
               new Client {
-
+                   AccessTokenType = AccessTokenType.Reference,
+                  AccessTokenLifetime=120,
+                  AllowOfflineAccess=true,
+                  UpdateAccessTokenClaimsOnRefresh=true,
                   ClientName="AccountTransactiom" ,
                   RequirePkce=true,
                   ClientId="accounttransactionclient",
